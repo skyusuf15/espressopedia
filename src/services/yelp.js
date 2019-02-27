@@ -4,6 +4,7 @@ const YELP_API_KEY = 'qLXGoQV_l6WFoDLbapbPVAwkou2O7ZixcDxsgKIqCFWHuoT0C-tUA1md1V
 
 const api = axios.create({
 baseURL: 'https://api.yelp.com/v3',
+// baseURL: 'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places',
 headers: {
     Authorization: `Bearer ${YELP_API_KEY}`
     },
