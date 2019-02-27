@@ -17,15 +17,15 @@ const getCoffeeShops = userLocation => {
             ...userLocation,
         }
     })
-    .then(res => {
+    .then(res => 
         res.data.businesses.map(business => {
             return {
                 name: business.name,
                 coords: business.coordinates,
-            };
-        });
-    }) 
-    .catch(error => console.error(error));
+            }
+        })
+    ) 
+    .catch(error => console.error(error))
 }
 
 export default {

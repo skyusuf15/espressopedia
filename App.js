@@ -17,7 +17,7 @@ export default class App extends React.Component {
 
   componentWillMount() {
     this.getLocationAsyc();
-  }
+  } 
 
   getCoffeeShops = async () => {
     const { latitude, longitude } = this.state.region;
@@ -35,9 +35,10 @@ export default class App extends React.Component {
     }
 
     let location = await Location.getCurrentPositionAsync({});
+
     const region = {
-      latitude: location.coords.latitude,
-      longitude: location.coords.longitude,
+      latitude: 37.321996988 || location.coords.latitude,
+      longitude: -122.0325472123455 || location.coords.longitude,
       ...deltas
     };
     await this.setState({ region });
